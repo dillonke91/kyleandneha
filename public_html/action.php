@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
 		// $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 		$subject = isset($_POST['subject']) ? trim($_POST['subject']) : 'RSVP Form Submission';
 
-		if($name && $email && $persons && $attending && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		if($name && $email && $attending && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 			$headers .= "From: My Wedding Website <no-replay@" . $_SERVER['SERVER_NAME'] . ">\r\n";
