@@ -4,6 +4,7 @@
 if(isset($_POST['submit'])) {
 
 		$to = 'dillonke91@gmail.com'; // Change this line to your email.
+		$to2 = 'nehag990@gmail.com'; // Change this line to your email.
 		
 		$name = isset($_POST['name']) ? trim($_POST['name']) : '';
 		$email = isset($_POST['email']) ? trim($_POST['email']) : '';
@@ -20,8 +21,9 @@ if(isset($_POST['submit'])) {
 			$message .= ' <br /> Email: ' . $email;
 			
 			@$send = mail($to, $subject, $message, $headers);
+			@$send2 = mail($to2, $subject, $message, $headers);
 			
-			if($send) {
+			if($send && $send2) {
 				$return['type'] = 'success';
 				$return['message'] = 'Message successfully submitted.';
 			} else {
